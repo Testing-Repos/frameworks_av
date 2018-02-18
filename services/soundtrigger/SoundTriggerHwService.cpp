@@ -258,7 +258,8 @@ void SoundTriggerHwService::sendRecognitionEvent(struct sound_trigger_recognitio
      }
     struct sound_trigger_phrase_recognition_event newEvent;
     if (event-> type == SOUND_MODEL_TYPE_KEYPHRASE && event->data_size != 0
-        && event->data_offset != sizeof(struct sound_trigger_phrase_recognition_event)) {
+            && event->data_offset != sizeof(struct sound_trigger_phrase_recognition_event)) {
+
         // set some defaults for the phrase if the recognition event won't be parsed properly
         // TODO: read defaults from the config
 
